@@ -23,7 +23,7 @@ class ApplicationPolicy
   end
 
   def update?
-    user.present? && (record.id == user.id)
+    false
   end
 
   def edit?

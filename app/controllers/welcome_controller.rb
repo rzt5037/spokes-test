@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
   def index
-    @users = User.all
+    redirect_to :controller => 'user', :action => 'index'
   end
 end

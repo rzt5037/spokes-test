@@ -1,0 +1,17 @@
+<h1>List of Users</h1>
+
+<% @users.each do |users| %>
+  <div>
+    <div>
+      <p>
+        <strong>Email:</strong> <%= users.email %>&emsp;
+        <% if policy(users).update? %>
+          <%= link_to 'Edit profile', edit_user_registration_path %>
+        <% end %></br>
+        <strong>First Name:</strong> <%= users.first_name %></br>
+        <strong>Last Name:</strong> <%= users.last_name %></br>
+        <strong>Favorite Color:</strong> <%= users.fave_color %></br></br>
+      </p>
+    </div>
+  </div>
+<% end %>
