@@ -2,16 +2,14 @@
 
 <% @users.each do |users| %>
   <div>
-    <div>
-      <p>
-        <strong>Email:</strong> <%= users.email %>&emsp;
-        <% if policy(users).update? %>
-          <%= link_to 'Edit profile', edit_user_registration_path %>
-        <% end %></br>
-        <strong>First Name:</strong> <%= users.first_name %></br>
-        <strong>Last Name:</strong> <%= users.last_name %></br>
-        <strong>Favorite Color:</strong> <%= users.fave_color %></br></br>
-      </p>
+    <div class="user-block">
+      <h4>Email:</h4> <%= users.email %>&emsp;
+      <% if policy(users).update? %>
+        <%= button_to 'Edit profile', edit_user_registration_path %>
+      <% end %></br>
+      <h4>First Name:</h4> <%= users.first_name %></br>
+      <h4>Last Name:</h4> <%= users.last_name %></br>
+      <h4>Favorite Color:</h4> <%= users.fave_color %></br>
     </div>
   </div>
 <% end %>
