@@ -1,0 +1,25 @@
+<h2>Edit Profile</h2>
+
+<%= form_for@user do |f| %>
+
+  <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name, autocomplete: "off" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name,autocomplete: "off" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :fave_color %><br />
+    <%= f.text_field :fave_color, autocomplete: "off" %>
+  </div></br></br>
+
+  <div class="actions">
+    <%= f.submit "Update" %>
+  </div>
+<% end %></br></br>
+
+<%= link_to "Back", :back %>

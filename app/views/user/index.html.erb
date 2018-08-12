@@ -5,7 +5,7 @@
     <div class="user-block">
       <h4>Email:</h4> <%= users.email %>&emsp;
       <% if policy(users).update? %>
-        <%= button_to 'Edit profile', edit_user_registration_path %>
+        <%= link_to 'Edit profile', edit_user_path(users.id) %>
       <% end %></br>
       <h4>First Name:</h4> <%= users.first_name %></br>
       <h4>Last Name:</h4> <%= users.last_name %></br>
